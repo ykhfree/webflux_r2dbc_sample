@@ -44,7 +44,8 @@
    created_date (TIMESTAMP)  --등록일자
    ```
 
-### API 기능목록 (상세한 명세는 괄호안의 RestDoc 참고)
+### API 기능목록
+(상세한 명세는 괄호안 경로의 RestDoc 참고)
 1. 뉴스피드 조회 (Spring RestDocs : src/main/resources/static/sns/get-news-feeds.html)
 2. 포스트 등록 (Spring RestDocs : src/main/resources/static/sns/insert-posting.html)
 3. 포스트 수정 (Spring RestDocs : src/main/resources/static/sns/update-posting.html)
