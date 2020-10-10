@@ -9,6 +9,7 @@ import com.ykhfree.sns.model.PostingReq;
 import com.ykhfree.sns.repository.FollowingRepository;
 import com.ykhfree.sns.repository.PostingRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -39,6 +40,7 @@ public class SnsServiceImpl implements SnsService {
     }
 
     @Override
+    @Transactional
     public Mono<PostingDto> insertPosting(PostingReq postingReq) {
 
         Posting posting = Posting.builder()
@@ -54,6 +56,7 @@ public class SnsServiceImpl implements SnsService {
     }
 
     @Override
+    @Transactional
     public Mono<PostingDto> updatePosting(PostingReq postingReq) {
 
         return postingRepository.findByIdAndUserId(postingReq.getId(), postingReq.getUserId())
@@ -69,6 +72,7 @@ public class SnsServiceImpl implements SnsService {
     }
 
     @Override
+    @Transactional
     public Mono<Void> deletePosting(PostingReq postingReq) {
 
         return postingRepository.findByIdAndUserId(postingReq.getId(), postingReq.getUserId())
@@ -86,6 +90,7 @@ public class SnsServiceImpl implements SnsService {
     }
 
     @Override
+    @Transactional
     public Mono<FollowingDto> insertFollowingInfo(FollowingReq followingReq) {
 
         Following following = Following.builder()
@@ -100,6 +105,7 @@ public class SnsServiceImpl implements SnsService {
     }
 
     @Override
+    @Transactional
     public Mono<Void> deleteFollowingInfo(FollowingReq followingReq) {
 
         return followingRepository.findByUserIdAndFollowUserId(followingReq.getUserId(), followingReq.getFollowUserId())
