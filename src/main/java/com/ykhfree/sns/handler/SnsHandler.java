@@ -20,7 +20,7 @@ public class SnsHandler {
 
     public Mono<ServerResponse> getNewsFeeds(ServerRequest serverRequest) {
 
-        return snsService.getNewsFeeds(getPathVariable(serverRequest, "userId"))
+        return snsService.getNewsFeeds(serverRequest.pathVariable("userId"))
                 .collectList()
                 .flatMap(result -> ServerResponse.ok().body(BodyInserters.fromValue(result)));
     }
@@ -29,7 +29,7 @@ public class SnsHandler {
 
         return serverRequest.bodyToMono(PostingReq.class)
                 .map(postingReq -> {
-                    postingReq.setUserId(getPathVariable(serverRequest, "userId"));
+                    postingReq.setUserId(serverRequest.pathVariable("userId"));
                     return postingReq;
                 })
                 .flatMap(snsService::insertPosting)
@@ -38,13 +38,10 @@ public class SnsHandler {
 
     public Mono<ServerResponse> updatePosting(ServerRequest serverRequest) {
 
-        Long id = Long.valueOf(getPathVariable(serverRequest, "id"));
-        String userId = getPathVariable(serverRequest, "userId");
-
         return serverRequest.bodyToMono(PostingReq.class)
                 .map(postingReq -> {
-                    postingReq.setId(id);
-                    postingReq.setUserId(userId);
+                    postingReq.setId(Long.valueOf(serverRequest.pathVariable("id")));
+                    postingReq.setUserId(serverRequest.pathVariable("userId"));
                     return postingReq;
                 })
                 .flatMap(snsService::updatePosting)
@@ -54,8 +51,8 @@ public class SnsHandler {
     public Mono<ServerResponse> deletePosting(ServerRequest serverRequest) {
 
         PostingReq postingReq = PostingReq.builder()
-                .id(Long.valueOf(getPathVariable(serverRequest, "id")))
-                .userId(getPathVariable(serverRequest, "userId"))
+                .id(Long.valueOf(serverRequest.pathVariable("id")))
+                .userId(serverRequest.pathVariable("userId"))
                 .build();
 
         return snsService.deletePosting(postingReq)
@@ -64,18 +61,16 @@ public class SnsHandler {
 
     public Mono<ServerResponse> getFollowingInfo(ServerRequest serverRequest) {
 
-        return snsService.getFollowingInfo(getPathVariable(serverRequest, "userId"))
+        return snsService.getFollowingInfo(serverRequest.pathVariable("userId"))
                 .collectList()
                 .flatMap(result -> ServerResponse.ok().body(BodyInserters.fromValue(result)));
     }
 
     public Mono<ServerResponse> insertFollowingInfo(ServerRequest serverRequest) {
 
-        String userId = getPathVariable(serverRequest, "userId");
-
         return serverRequest.bodyToMono(FollowingReq.class)
                 .map(followingReq -> {
-                    followingReq.setUserId(userId);
+                    followingReq.setUserId(serverRequest.pathVariable("userId"));
                     return followingReq;
                 })
                 .flatMap(snsService::insertFollowingInfo)
@@ -85,16 +80,11 @@ public class SnsHandler {
     public Mono<ServerResponse> deleteFollowingInfo(ServerRequest serverRequest) {
 
         FollowingReq followingReq = FollowingReq.builder()
-                .userId(getPathVariable(serverRequest, "userId"))
-                .followUserId(getPathVariable(serverRequest, "followUserId"))
+                .userId(serverRequest.pathVariable("userId"))
+                .followUserId(serverRequest.pathVariable("followUserId"))
                 .build();
 
         return snsService.deleteFollowingInfo(followingReq)
                 .flatMap(result -> ServerResponse.noContent().build());
-    }
-
-    private String getPathVariable(ServerRequest serverRequest, String paramName) {
-
-        return serverRequest.pathVariable(paramName);
     }
 }

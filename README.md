@@ -45,7 +45,14 @@
    created_date (TIMESTAMP)  --등록일자
    ```
 
-### API 기능명세
-- src/main/resources/static/sns 하위 Spring RestDocs에 기입함.
+### API 기능목록 (상세한 명세는 괄호안의 RestDoc 참고)
+1. 뉴스피드 조회 (Spring RestDocs : src/main/resources/static/sns/get-news-feeds.html)
+2. 포스트 등록 (Spring RestDocs : src/main/resources/static/sns/insert-posting.html)
+3. 포스트 수정 (Spring RestDocs : src/main/resources/static/sns/update-posting.html)
+4. 포스트 삭제 (Spring RestDocs : src/main/resources/static/sns/delete-posting.html)
+5. 팔로잉 정보 조회 (Spring RestDocs : src/main/resources/static/sns/get-following-info.html.html)
+6. 팔로잉 정보 등록 (Spring RestDocs : src/main/resources/static/sns/insert-following.html)
+7. 팔로잉 정보 삭제 (Spring RestDocs : src/main/resources/static/sns/delete-following.html)
+
 - API 개발 시 전제했던 상황
-  1. 파라미터인 userId(작성자 ID)는 JWT를 복호화 후 추출한 값을 넘겨받았다는 가정하에 개발.
+  1. 파라미터인 userId(작성자 ID)는 JWT를 복호화 후 추출한 값을 API_GATEWAY로부터 넘겨받았다는 가정하에 개발.
