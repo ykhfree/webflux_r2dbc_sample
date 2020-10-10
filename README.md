@@ -5,7 +5,7 @@
 * JDK 11
 * Spring WebFlux 2.3.4.RELEASE
 * Spring DATA R2DBC 2.3.4.RELEASE
-* H2 1.4 R2DBC (파일방식)
+* H2 1.4 (파일방식)
 * Lombok 1.18.12
 * gradle wrapper 6.6.1
 * Intellij Idea
