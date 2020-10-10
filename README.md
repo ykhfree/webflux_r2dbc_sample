@@ -46,6 +46,6 @@
    ```
 
 ### API 기능명세
-- src/main/resources/static/sns 하위 Spring RestDocs에 기입
+- src/main/resources/static/sns 하위 Spring RestDocs에 기입함.
 - API 개발 시 전제했던 상황
-  1. 파라미터인 userId는 JWT를 복호화 후 추출한 값을 넘겨받는 것을 전제로 개발함.
+  1. 파라미터인 userId(작성자 ID)는 JWT를 복호화 후 추출한 값을 넘겨받았다는 가정하에 개발.
