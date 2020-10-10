@@ -1,0 +1,47 @@
+= 팔로잉 삭제
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:site-url: /build/asciidoc/html5/
+
+[[introduction]]
+== delete-following API DOC
+
+=== Request
+
+CURL:
+
+include::{snippets}/delete-following/curl-request.adoc[]
+
+PathParameter:
+
+include::{snippets}/delete-following/path-parameters.adoc[]
+
+Request Body:
+
+include::{snippets}/delete-following/request-body.adoc[]
+
+Request HTTP Example:
+
+include::{snippets}/delete-following/http-request.adoc[]
+
+Request HTTPie Example:
+
+include::{snippets}/delete-following/httpie-request.adoc[]
+
+
+=== Response
+
+Response Body:
+
+include::{snippets}/delete-following/response-body.adoc[]
+
+Response HTTP Example:
+
+include::{snippets}/delete-following/http-response.adoc[]

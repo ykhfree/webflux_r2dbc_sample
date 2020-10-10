@@ -1,0 +1,51 @@
+= 팔로우 등록
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:site-url: /build/asciidoc/html5/
+
+[[introduction]]
+== insert-following API DOC
+
+=== Request
+
+CURL:
+
+include::{snippets}/insert-following/curl-request.adoc[]
+
+PathParameter:
+
+include::{snippets}/insert-following/path-parameters.adoc[]
+
+Request Body:
+
+include::{snippets}/insert-following/request-body.adoc[]
+
+Request HTTP Example:
+
+include::{snippets}/insert-following/http-request.adoc[]
+
+Request HTTPie Example:
+
+include::{snippets}/insert-following/httpie-request.adoc[]
+
+
+=== Response
+
+Response Body:
+
+include::{snippets}/insert-following/response-body.adoc[]
+
+Response Fields:
+
+include::{snippets}/insert-following/response-fields.adoc[]
+
+Response HTTP Example:
+
+include::{snippets}/insert-following/http-response.adoc[]

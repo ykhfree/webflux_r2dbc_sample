@@ -1,0 +1,51 @@
+= 뉴스피드 조회
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:site-url: /build/asciidoc/html5/
+
+[[introduction]]
+== get-news-feeds API DOC
+
+=== Request
+
+CURL:
+
+include::{snippets}/get-news-feeds/curl-request.adoc[]
+
+Request Body:
+
+include::{snippets}/get-news-feeds/request-body.adoc[]
+
+PathParameter:
+
+include::{snippets}/get-news-feeds/path-parameters.adoc[]
+
+Request HTTP Example:
+
+include::{snippets}/get-news-feeds/http-request.adoc[]
+
+Request HTTPie Example:
+
+include::{snippets}/get-news-feeds/httpie-request.adoc[]
+
+
+=== Response
+
+Response Body:
+
+include::{snippets}/get-news-feeds/response-body.adoc[]
+
+Response Fields:
+
+include::{snippets}/get-news-feeds/response-fields.adoc[]
+
+Response HTTP Example:
+
+include::{snippets}/get-news-feeds/http-response.adoc[]

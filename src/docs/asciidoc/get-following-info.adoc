@@ -1,0 +1,51 @@
+= 팔로잉 대상자 ID 조회
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:site-url: /build/asciidoc/html5/
+
+[[introduction]]
+== get-following-info API DOC
+
+=== Request
+
+CURL:
+
+include::{snippets}/get-following-info/curl-request.adoc[]
+
+Request Body:
+
+include::{snippets}/get-following-info/request-body.adoc[]
+
+PathParameter:
+
+include::{snippets}/get-following-info/path-parameters.adoc[]
+
+Request HTTP Example:
+
+include::{snippets}/get-following-info/http-request.adoc[]
+
+Request HTTPie Example:
+
+include::{snippets}/get-following-info/httpie-request.adoc[]
+
+
+=== Response
+
+Response Body:
+
+include::{snippets}/get-following-info/response-body.adoc[]
+
+Response Fields:
+
+include::{snippets}/get-following-info/response-fields.adoc[]
+
+Response HTTP Example:
+
+include::{snippets}/get-following-info/http-response.adoc[]
