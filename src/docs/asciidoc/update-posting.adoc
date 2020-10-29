@@ -1,0 +1,51 @@
+= 포스트 수정
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:site-url: /build/asciidoc/html5/
+
+[[introduction]]
+== update-posting API DOC
+
+=== Request
+
+CURL:
+
+include::{snippets}/update-posting/curl-request.adoc[]
+
+PathParameter:
+
+include::{snippets}/update-posting/path-parameters.adoc[]
+
+Request Body:
+
+include::{snippets}/update-posting/request-body.adoc[]
+
+Request HTTP Example:
+
+include::{snippets}/update-posting/http-request.adoc[]
+
+Request HTTPie Example:
+
+include::{snippets}/update-posting/httpie-request.adoc[]
+
+
+=== Response
+
+Response Body:
+
+include::{snippets}/update-posting/response-body.adoc[]
+
+Response Fields:
+
+include::{snippets}/update-posting/response-fields.adoc[]
+
+Response HTTP Example:
+
+include::{snippets}/update-posting/http-response.adoc[]

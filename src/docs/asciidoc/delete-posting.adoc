@@ -1,0 +1,47 @@
+= 포스트 삭제
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:site-url: /build/asciidoc/html5/
+
+[[introduction]]
+== delete-posting API DOC
+
+=== Request
+
+CURL:
+
+include::{snippets}/delete-posting/curl-request.adoc[]
+
+PathParameter:
+
+include::{snippets}/delete-posting/path-parameters.adoc[]
+
+Request Body:
+
+include::{snippets}/delete-posting/request-body.adoc[]
+
+Request HTTP Example:
+
+include::{snippets}/delete-posting/http-request.adoc[]
+
+Request HTTPie Example:
+
+include::{snippets}/delete-posting/httpie-request.adoc[]
+
+
+=== Response
+
+Response Body:
+
+include::{snippets}/delete-posting/response-body.adoc[]
+
+Response HTTP Example:
+
+include::{snippets}/delete-posting/http-response.adoc[]

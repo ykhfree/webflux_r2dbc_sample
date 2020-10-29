@@ -1,0 +1,51 @@
+= 포스트 등록
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:site-url: /build/asciidoc/html5/
+
+[[introduction]]
+== insert-posting API DOC
+
+=== Request
+
+CURL:
+
+include::{snippets}/insert-posting/curl-request.adoc[]
+
+PathParameter:
+
+include::{snippets}/insert-posting/path-parameters.adoc[]
+
+Request Body:
+
+include::{snippets}/insert-posting/request-body.adoc[]
+
+Request HTTP Example:
+
+include::{snippets}/insert-posting/http-request.adoc[]
+
+Request HTTPie Example:
+
+include::{snippets}/insert-posting/httpie-request.adoc[]
+
+
+=== Response
+
+Response Body:
+
+include::{snippets}/insert-posting/response-body.adoc[]
+
+Response Fields:
+
+include::{snippets}/insert-posting/response-fields.adoc[]
+
+Response HTTP Example:
+
+include::{snippets}/insert-posting/http-response.adoc[]

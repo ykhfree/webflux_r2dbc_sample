@@ -1,0 +1,12 @@
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
+      io:
+        r2dbc:
+          h2: DEBUG
