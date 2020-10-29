@@ -1,4 +1,4 @@
-# 레진엔터테인먼트 과제
+# Spring Webflux + R2DBC 샘플
 
 ### 개발 및 빌드환경
 
@@ -21,6 +21,9 @@
    or
    gradlew.bat bootRun
    ```
+
+### Application 내용
+간단한 SNS 서비스를 구현함. 뉴스피드 조회, 포스팅(등록,수정,삭제), 팔로잉(조회,등록,삭제)
 
 ### Entity 구조
 (자세한 DDL문은 src/main/resources/schema/schema.sql 참조)
