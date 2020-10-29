@@ -23,39 +23,4 @@
    ```
 
 ### Application 내용
-간단한 SNS 서비스를 구현함. 뉴스피드 조회, 포스팅(등록,수정,삭제), 팔로잉(조회,등록,삭제)
-
-### Entity 구조
-(자세한 DDL문은 src/main/resources/schema/schema.sql 참조)
-
-#### posting
-- 포스트 글 정보가 저장되는 테이블
-   ```
-   id (BIGSERIAL) PK  --포스트 ID
-   user_id (VARCHAR(50))  --등록자 ID
-   contents (VARCHAR(500))  --포스트 글 내용
-   created_date (TIMESTAMP)  --등록알자
-   updated_date (TIMESTAMP)  --수정알자
-   ```
-  
-#### following
-- 팔로잉 관계가 저장되는 테이블
-   ```
-   id (BIGSERIAL) PK  --팔로잉 ID
-   user_id (VARCHAR(50))  --팔로잉 주체 유저 ID
-   follow_user_id (VARCHAR(50))  --팔로잉 대상 유저 ID
-   created_date (TIMESTAMP)  --등록일자
-   ```
-
-### API 기능목록
-(상세한 명세는 괄호안 경로의 RestDoc 참고)
-1. 뉴스피드 조회 (Spring RestDocs : src/main/resources/static/sns/get-news-feeds.html)
-2. 포스트 등록 (Spring RestDocs : src/main/resources/static/sns/insert-posting.html)
-3. 포스트 수정 (Spring RestDocs : src/main/resources/static/sns/update-posting.html)
-4. 포스트 삭제 (Spring RestDocs : src/main/resources/static/sns/delete-posting.html)
-5. 팔로잉 정보 조회 (Spring RestDocs : src/main/resources/static/sns/get-following-info.html.html)
-6. 팔로잉 정보 등록 (Spring RestDocs : src/main/resources/static/sns/insert-following.html)
-7. 팔로잉 정보 삭제 (Spring RestDocs : src/main/resources/static/sns/delete-following.html)
-
-- API 개발 시 전제했던 상황
-  1. 파라미터인 userId(작성자 ID)는 JWT를 복호화 후 추출한 값을 API_GATEWAY로부터 넘겨받았다는 가정하에 개발.
+간단한 SNS 서비스를 구현
